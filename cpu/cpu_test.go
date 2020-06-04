@@ -5,7 +5,7 @@
 package cpu_test
 
 import (
-	"github.com/refraction-networking/utls/cpu"
+	"crypto/utls/cpu"
 	"runtime"
 	"testing"
 )

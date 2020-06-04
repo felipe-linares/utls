@@ -2,16 +2,15 @@ package main
 
 import (
 	"bufio"
+	tls "crypto/utls"
 	"encoding/hex"
 	"fmt"
 	"net"
 	"net/http"
 	"net/http/httputil"
+	"net/http2"
 	"net/url"
 	"time"
-
-	"github.com/refraction-networking/utls"
-	"golang.org/x/net/http2"
 )
 
 var (

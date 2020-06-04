@@ -9,6 +9,8 @@ import (
 	"crypto"
 	"crypto/rand"
 	"crypto/sha512"
+	tls "crypto/utls"
+	"crypto/utls/cpu"
 	"crypto/x509"
 	"errors"
 	"fmt"
@@ -19,8 +21,6 @@ import (
 	"strings"
 	"sync"
 	"time"
-
-	"github.com/refraction-networking/utls/cpu"
 )
 
 const (
@@ -587,6 +587,8 @@ type Config struct {
 	// Use of KeyLogWriter compromises security and should only be
 	// used for debugging.
 	KeyLogWriter io.Writer
+
+	ClientHello tls.ClientHelloID
 
 	serverInitOnce sync.Once // guards calling (*Config).serverInit
 
