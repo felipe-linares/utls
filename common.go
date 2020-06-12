@@ -9,7 +9,6 @@ import (
 	"crypto"
 	"crypto/rand"
 	"crypto/sha512"
-	tls "crypto/utls"
 	"crypto/utls/cpu"
 	"crypto/x509"
 	"errors"
@@ -588,7 +587,7 @@ type Config struct {
 	// used for debugging.
 	KeyLogWriter io.Writer
 
-	ClientHello tls.ClientHelloID
+	ClientHello ClientHelloID
 
 	serverInitOnce sync.Once // guards calling (*Config).serverInit
 
