@@ -5,7 +5,7 @@
 package cpu_test
 
 import (
-	"crypto/utls/cpu"
+	"crypto/tls/cpu"
 	"runtime"
 	"testing"
 )

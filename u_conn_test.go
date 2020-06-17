@@ -6,7 +6,7 @@ package tls
 
 import (
 	"bytes"
-	tls "crypto/utls"
+	"crypto/tls"
 	"fmt"
 	"io"
 	"net"

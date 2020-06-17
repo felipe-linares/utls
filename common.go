@@ -9,7 +9,7 @@ import (
 	"crypto"
 	"crypto/rand"
 	"crypto/sha512"
-	"crypto/utls/cpu"
+	"crypto/tls/cpu"
 	"crypto/x509"
 	"errors"
 	"fmt"

@@ -5,7 +5,7 @@
 package tls_test
 
 import (
-	tls "crypto/utls"
+	"crypto/tls"
 	"crypto/x509"
 	"log"
 	"net/http"

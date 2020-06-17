@@ -2,7 +2,7 @@ package main
 
 import (
 	"bufio"
-	tls "crypto/utls"
+	"crypto/tls"
 	"encoding/hex"
 	"fmt"
 	"net"

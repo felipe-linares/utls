@@ -6,7 +6,7 @@ package tls
 
 import (
 	"bytes"
-	"crypto/utls/testenv"
+	"crypto/tls/testenv"
 	"crypto/x509"
 	"encoding/json"
 	"errors"
