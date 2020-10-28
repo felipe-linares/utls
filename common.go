@@ -9,6 +9,7 @@ import (
 	"crypto"
 	"crypto/rand"
 	"crypto/sha512"
+	"crypto/tls/cpu"
 	"crypto/x509"
 	"errors"
 	"fmt"
@@ -19,8 +20,6 @@ import (
 	"strings"
 	"sync"
 	"time"
-
-	"github.com/refraction-networking/utls/cpu"
 )
 
 const (
@@ -588,6 +587,8 @@ type Config struct {
 	// used for debugging.
 	KeyLogWriter io.Writer
 
+	ClientHello ClientHelloID
+
 	serverInitOnce sync.Once // guards calling (*Config).serverInit
 
 	// mutex protects sessionTicketKeys.
@@ -666,6 +667,7 @@ func (c *Config) Clone() *Config {
 		Renegotiation:               c.Renegotiation,
 		KeyLogWriter:                c.KeyLogWriter,
 		sessionTicketKeys:           sessionTicketKeys,
+		ClientHello:                 c.ClientHello,
 	}
 }
 
